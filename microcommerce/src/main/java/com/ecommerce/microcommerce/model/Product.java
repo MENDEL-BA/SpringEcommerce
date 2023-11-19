@@ -5,12 +5,12 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 //@JsonIgnoreProperties({"purchasePrice","id"})
-@JsonFilter("myDynamicFilter")
-public class Product {
+//@JsonFilter("myDynamicFilter")
+public class Product implements Serializable{
     private int id;
     private String name;
     private int price;
-//    @JsonIgnore
+    @JsonIgnore
     private int purchasePrice;
 
     public Product() {
